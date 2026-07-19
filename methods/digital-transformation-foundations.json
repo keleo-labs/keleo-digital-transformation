@@ -1,0 +1,94 @@
+{
+  "kind": "method",
+  "name": "Digital Transformation Foundations",
+  "description": "Comprehensive methodology for organizational digital transformation covering strategy, technology, organizational change, responsible governance, and lifecycle coordination. Derived from MBA Digital Transformation coursework (BEMM257, University of Exeter).",
+  "tags": {
+    "domainTags": [
+      "API Management",
+      "Algorithmic Governance",
+      "Business Model Innovation",
+      "Change Management",
+      "Cloud Computing",
+      "Culture",
+      "Customer Value",
+      "Cybersecurity",
+      "Data Governance",
+      "Digital Ethics",
+      "Digital Strategy",
+      "Digital Transformation",
+      "Innovation Management",
+      "Lifecycle Management",
+      "Organizational Design",
+      "Platform Economics",
+      "Programme Coordination",
+      "Regulatory Compliance",
+      "Responsible AI",
+      "Servitization",
+      "Strategic Management",
+      "Technology Architecture",
+      "Workforce Impact"
+    ],
+    "lifecycleTags": [
+      "Assessment",
+      "Delivery",
+      "Evolution",
+      "Foundation",
+      "Optimization",
+      "Strategy"
+    ],
+    "organizationalTags": [
+      "Compliance",
+      "Customer",
+      "Data",
+      "Enterprise Leadership",
+      "Human Resources",
+      "Innovation",
+      "Operations",
+      "Security",
+      "Strategy",
+      "Technology"
+    ]
+  },
+  "narratives": [
+    {
+      "name": "Digital Transformation Foundations Journey",
+      "description": "Method-level narrative describing the Digital Transformation Foundations transformation lifecycle.",
+      "narrativeTypeName": "Digital Transformation Journey",
+      "narrativeContexts": [
+        {
+          "seq": 1,
+          "narrativeElementName": "Sense and Strategize",
+          "context": "Organizations recognize digital disruption forces, assess current maturity, and formulate transformation vision spanning strategy, technology, people, and governance dimensions."
+        },
+        {
+          "seq": 2,
+          "narrativeElementName": "Translate and Map",
+          "context": "Strategic intent translates into actionable roadmaps: technology architecture blueprints, capability development plans, data strategies, and ethical governance frameworks align to deliver on the transformation vision."
+        },
+        {
+          "seq": 3,
+          "narrativeElementName": "Co-Create the Runway",
+          "context": "Cross-functional teams build foundational capabilities: modern infrastructure, data pipelines, organizational redesign, innovation processes, and responsible AI practices emerge through collaborative co-creation."
+        },
+        {
+          "seq": 4,
+          "narrativeElementName": "Deliver and Emerge",
+          "context": "Transformation delivers measurable outcomes: adaptive strategies, scalable platforms, agile organizations, embedded digital culture, and proactive governance create sustainable competitive advantage."
+        },
+        {
+          "seq": 5,
+          "narrativeElementName": "Feedback and Refactor",
+          "context": "Continuous learning loops drive evolution: strategy adapts, technology composes, culture innovates, and governance anticipates — the organization becomes a perpetual transformation engine."
+        }
+      ]
+    }
+  ],
+  "baselinePracticeName": "Digital Transformation Essentials",
+  "practiceNames": [
+    "Strategic Transformation",
+    "Digital Technology and Data",
+    "Organizational Transformation",
+    "Responsible Digital Practice",
+    "Digital Transformation Lifecycle"
+  ]
+}

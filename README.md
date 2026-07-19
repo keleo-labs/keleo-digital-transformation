@@ -1,119 +1,81 @@
-# keleo-template
+# Digital Transformation Practice Library
 
-A template repository for creating and organizing practices and methods using the [Keleo Studio](https://github.com/keleo-labs/keleo-studio) application.
+A structured practice library for enterprise digital transformation, encoded as JSON for use with [Keleo Studio](https://github.com/keleo-labs/keleo-studio). Derived from industry best practice.
 
-## Overview
+## What This Library Contains
 
-This template provides a standardized directory structure for collecting JSON-formatted practices that keleo-studio language schema. The practices created here can be authored, visualized, and managed using the Keleo Studio web application.
+The library models digital transformation across four interdependent dimensions, coordinated through a five-phase lifecycle:
 
-## What is Keleo Studio?
+### Domain Practices (`practices/`)
 
-Keleo Studio (also known as Adoption Framework) is a comprehensive practice management and method composition system that enables teams to:
+| Practice | Focus | Key Frameworks |
+|----------|-------|----------------|
+| **Strategic Transformation** | Digital strategy, business model innovation, servitization, customer value co-creation | Teece dynamic capabilities, Business Model Canvas, Furr & Shipilov disruption, service-dominant logic |
+| **Digital Technology and Data** | Composable infrastructure, data governance, platform ecosystems, cybersecurity | SMACIT, dual-backbone architecture, data mesh, zero-trust, DevSecOps |
+| **Organizational Transformation** | Leadership capability, digital culture, agile structures, innovation systems | Kotter dual operating system, ING squads/tribes/chapters, Haier Rendanheyi, three horizons |
+| **Responsible Digital Practice** | Digital ethics, algorithmic accountability, workforce equity | Zuboff surveillance capitalism, Floridi soft/hard ethics, data feminism, GDPR |
 
-- **Author Practices**: Create software engineering practices with schema validation
-- **Compose Methods**: Build methods from baseline practices and extensions
-- **Visualize Workflows**: Generate Kanban pattern boards and flow diagrams
-- **Manage Libraries**: Browse, import, export, and organize practice collections
+### Lifecycle Orchestration (`practices/`)
+
+**Digital Transformation Lifecycle** coordinates all 14 Alphas from the domain practices through five phases:
+
+1. **Sense and Strategize** — Baseline assessment and strategic awareness
+2. **Translate and Map** — Strategic translation to actionable plans
+3. **Co-Create the Runway** — Collaborative foundation building
+4. **Deliver and Emerge** — Scaled delivery with emergent innovation
+5. **Feedback and Refactor** — Outcome measurement and strategic re-entry
+
+### Composed Methods (`methods/`)
+
+**Digital Transformation Foundations** — A complete method composing all five practices against the "Digital Transformation Essentials" baseline, providing an end-to-end framework for organizational digital transformation.
+
+## Library at a Glance
+
+- **14 Alphas** — Digital Strategy, Business Model, Customer Value Delivery, Digital Infrastructure, Data Capital, Platform Ecosystem, Digital Security, Transformation Leadership, Organizational Capability, Digital Culture, Innovation Capability, Responsible Digital Governance, Algorithmic Accountability, Digital Workforce Equity
+- **47 Activities** across 4 domain practices
+- **25 WorkProducts** including strategy documents, architecture blueprints, governance frameworks, and maturity assessments
+- **13 Personas** in 4 PersonaGroups — from Chief Digital Officer to Algorithmic Accountability Analyst
+- **1 Lifecycle Pattern** with 5 phases mapping progressive state targets for all Alphas
 
 ## Directory Structure
 
 ```
-keleo-template/
-├── baseline/          # PracticeBaseline JSON files (kernel practices)
-├── methods/           # Method JSON files (composed practices)
-└── practices/         # Practice JSON files (extensions)
+├── baseline/          # Baseline practice files (kernel ontology)
+├── methods/           # Composed methods (multiple practices)
+└── practices/         # Domain practices and lifecycle orchestration
 ```
 
-### Directory Purposes
-
-- **baseline/**: Contains foundational kernel practices that define core elements (Alphas, States, Activities, WorkProducts, Competencies, etc.)
-- **practices/**: Contains practice extensions that build upon baselines with specific methodologies
-- **methods/**: Contains composed methods that combine a baseline with multiple practices
+**Note**: The baseline practice "Digital Transformation Essentials" is referenced by all files but is not stored in this repository. It must be available in Keleo Studio's practice library for method resolution.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Access to Keleo Studio - see the [main repository](https://github.com/keleo-labs/keleo-studio)
-- Basic understanding of SEMAT language concepts
-- A source methodology or documentation you want to convert into practices
+- [Keleo Studio](https://github.com/keleo-labs/keleo-studio) (typically cloned at `../adoptionframework`)
+- The "Digital Transformation Essentials" baseline loaded in Keleo Studio
 
-### Workflow
-
-1. **Set up Keleo Studio**: Clone and run the Adoption Framework application (typically at `../adoptionframework`)
-2. **Generate Practices**: Use the LLM-based generation process with the prompts in the Keleo Studio `prompts and instructions/` folder
-3. **Organize Output**: Place generated JSON files in the appropriate directories:
-   - New kernel practices → `baseline/`
-   - Practice extensions → `practices/`
-   - Composed methods → `methods/`
-4. **Validate**: Use Keleo Studio's validation tools to ensure schema compliance
-5. **Visualize**: Import into Keleo Studio to view Kanban boards and flow diagrams
-
-## Generating Practices with LLMs
-
-Keleo Studio includes comprehensive prompts for generating practices from source documentation. The main approaches are:
-
-### Full Process (11 Phases)
-
-Use `full-process-gem.md` for complete practice generation with rigorous validation:
-
-1. Load the baseline kernel and schema
-2. Provide source documentation (methodology, framework, or workflow)
-3. Work through 11 phases: Personas → Alphas → WorkProducts → Activities → PersonaGroups → Narratives → Lifecycle Patterns → Narrative Patterns → Practice Formation → Logical Integrity → Final Output
-4. Output validated JSON practices/methods
-
-### Two-Phase Research Process
-
-Use `phase 1 gem.md` and `phase 2 gem.md` for a research-first approach:
-
-- **Phase 1**: Generate human-readable research report analyzing the source methodology
-- **Phase 2**: Convert the research report into validated JSON
-
-## Practice Components
-
-Practices in this system contain:
-
-- **Alphas**: Essential elements of concern (e.g., Platform, Team, Opportunity)
-- **States**: Progression checkpoints for alphas
-- **Activities**: Work that contributes to alpha states
-- **WorkProducts**: Artifacts produced by activities
-- **Patterns**: Temporal progressions showing how practices unfold
-- **Personas & PersonaGroups**: Roles and teams involved
-- **Competencies**: Required skills mapped to personas
-- **Narratives**: Contextual storytelling for elements
-
-## Validation
-
-All practices must conform to the JSON schema defined in Keleo Studio:
+### Validation
 
 ```bash
-# Validate a practice file using Keleo Studio
 cd ../adoptionframework
-node validate-schema.js path/to/practice.json
+node validate-schema.js path/to/practice.json       # Schema validation
+node validate-full.js path/to/practice.json          # Schema + logical integrity checks
 ```
 
-## Integration with Keleo Studio
+### Visualization
 
-To use these practices in Keleo Studio:
+```bash
+cd ../adoptionframework
+npm install
+npm run dev
+# Open http://localhost:3000
+```
 
-1. Start the Keleo Studio development server
-2. Use the **Library** feature to import practice JSON files
-3. Use the **Practice Author** to edit and refine practices
-4. Use the **Method Builder** to compose methods from practices
-5. Use the **Flow Visualizer** to view Kanban pattern boards
-
-## Example Practice Libraries
-
-See the Keleo Studio repository for reference examples:
-- `practices/adoption-library.json` - Main practice library
-- `practices/team-topologies-method.json` - Example composed method
+Import practice files via the Library page, then use:
+- **Practice Author** to edit practices
+- **Method Builder** to compose methods
+- **Flow Visualizer** to view Kanban pattern boards
 
 ## License
 
-This template repository is licensed under the Apache License 2.0.
-
-## Additional Resources
-
-- [Keleo Studio Documentation](https://github.com/keleo-labs/keleo-studio) (Private repository)
-- [SEMAT Essence Framework](https://www.semat.org/)
-- Keleo Studio `prompts and instructions/` folder for LLM generation guides
+Licensed under the [Apache License 2.0](LICENSE).
